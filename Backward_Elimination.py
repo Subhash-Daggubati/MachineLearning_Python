@@ -32,3 +32,13 @@ def backward_elimination(data, target,alpha=0.05):
             return "No Variable is significant"
     
 
+"""
+Sample code to use this function
+
+import sys
+sys.path.append("D:\Fall 2019\ML\Python_Machine Learning") #replace the path with the path where you save Backward_Elimination.py file.
+import Backward_Elimination.py
+data = pd.read_csv(file_name) 
+backward_elimination(data,target_column_name,alpha)
+
+"""
