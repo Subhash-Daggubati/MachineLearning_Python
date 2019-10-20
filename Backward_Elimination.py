@@ -9,9 +9,6 @@ import pandas as pd
 import numpy as np
 import statsmodels.api as sm
 
-file_path = 'D:\\Fall 2019\\ML\\bodyfat.txt'
-data = pd.read_csv(file_path, sep='\t',header=0)
-
 def backward_elimination(data, target,alpha=0.05):
     dependent_var = data[target]
     independent_vars = data.drop(target,axis=1)
@@ -33,6 +30,5 @@ def backward_elimination(data, target,alpha=0.05):
             return est2
         if (independent_vars.empty):
             return "No Variable is significant"
+    
 
-output = backward_elimination(data,'Pct.BF')
-output.summary()
