@@ -137,7 +137,6 @@ class HTML_Report:
     def add_image(self,image_url):
         '''Adds a image to the HTML report'''
         image = '''<img src=" ''' + image_url + '''" >'''
-#        image = '''<iframe width="1000" height="1000" frameborder="0" seamless="seamless" scrolling="no" src="''' + image_url + '''.embed?width=1000&height=1000"></iframe>'''
         self.report_content = self.report_content + image
     
     def add_df_as_table(self, df):
